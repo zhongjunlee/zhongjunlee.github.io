@@ -5,7 +5,8 @@ header-img: img/home-bg.jpg
 email: 326187255@qq.com
 description: "这里是 @Johnny李仲君 的个人博客，与你一起发现更大的世界 | 要做一个有 thought 的程序员"
 keyword: "李仲君, Johnny李仲君, Java, zhongjunlee, 李仲君的博客, Johnny Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计"
-url: "https://zhongjunlee.github.io" # your host, for absolute URL
+#url: "https://zhongjunlee.github.io" # your host, for absolute URL
+url: ""
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
