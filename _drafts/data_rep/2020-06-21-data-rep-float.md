@@ -69,8 +69,8 @@ sign   exponent             fraction
 ```
 
 - The _sign_ part took 1 bit to indicate the sign of the floats. (`0` for `+`
-and `1` for `-`. This is the same treatment as the [sign magnitute](2020-06-19-data-rep-int.md##sign-magnitude-原码).
-- The _exponent_ part took 8 bits and used [_offset-binary (biased) form_](2020-06-19-data-rep-int.md#offset-binary-移码) to represent a signed integer.
+and `1` for `-`. This is the same treatment as the [sign magnitute](_drafts/data_rep/2020-06-19-data-rep-int.md##sign-magnitude-原码).
+- The _exponent_ part took 8 bits and used [_offset-binary (biased) form_](_drafts/data_rep/2020-06-19-data-rep-int.md#offset-binary-移码) to represent a signed integer.
 It's a variant form since it took out the `-127` (all 0s) for zero and `+128`
 (all 1s) for non-numbers, thus it ranges only `[-126, 127]` instead of
 `[-127, 128]`. Then, it choose the zero offset of `127` in these 254 bits (like
