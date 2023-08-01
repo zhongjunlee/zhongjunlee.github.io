@@ -15,9 +15,9 @@ tags:
 
 
 
-# [1、请谈谈你对 volatile 的理解](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_1、请谈谈你对-volatile-的理解)
+# 1、请谈谈你对 volatile 的理解
 
-### [volatile 是 Java 虚拟机提供的轻量级的同步机制](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=volatile-是-java-虚拟机提供的轻量级的同步机制)
+### volatile 是 Java 虚拟机提供的轻量级的同步机制
 
 - 保证可见性
 - 禁止指令排序
@@ -33,7 +33,7 @@ JMM 同步规定
 
 #### [内存模型图](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=内存模型图)
 
-![输入图片说明](http://notes.xiyankt.com/java%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%E8%AE%AD%E7%BB%83/images/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.png)
+![image-20230801175745299](C:\Users\Arjun Lee\AppData\Roaming\Typora\typora-user-images\image-20230801175745299.png)
 
 #### [三大特性：](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=三大特性：)
 
@@ -184,11 +184,11 @@ volatile 实现禁止指令重排序的优化，从而避免了多线程环境�
 
 下面是保守策略下，volatile写插入内存屏障后生成的指令序列示意图：
 
-![输入图片说明](http://notes.xiyankt.com/java%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%E8%AE%AD%E7%BB%83/images/0e75180bf35c40e2921493d0bf6bd684_th.png)
+![image-20230801175822750](C:\Users\Arjun Lee\AppData\Roaming\Typora\typora-user-images\image-20230801175822750.png)
 
 下面是在保守策略下，volatile读插入内存屏障后生成的指令序列示意图：
 
-![输入图片说明](http://notes.xiyankt.com/java%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%E8%AE%AD%E7%BB%83/images/20200910141550.png)
+![image-20230801175832557](C:\Users\Arjun Lee\AppData\Roaming\Typora\typora-user-images\image-20230801175832557.png)
 
 线程安全性保证
 
@@ -273,7 +273,7 @@ instance = memory; // 3.设置instance指向刚分配的内存地址，此时ins
 
 > instance(memory); // 2.初始化对象
 
-# [2、CAS 你知道吗？CAS 底层原理？谈谈对 UnSafe 的理解？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_2、cas-你知道吗？cas-底层原理？谈谈对-unsafe-的理解？)
+# 2、CAS 你知道吗？CAS 底层原理？谈谈对 UnSafe 的理解？
 
 ```
 public class CASDemo {
@@ -350,7 +350,7 @@ CAS 的缺点？
   - 对于多个共享变量操作时，循环 CAS 就无法保证操作的原子性。
 - 引出 ABA 问题
 
-# [3、原子类 AtomicInteger 的 ABA 问题谈一谈？原子更新引用知道吗？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_3、原子类-atomicinteger-的-aba-问题谈一谈？原子更新引用知道吗？)
+# 3、原子类 AtomicInteger 的 ABA 问题谈一谈？原子更新引用知道吗？
 
 原子引用
 
@@ -432,7 +432,7 @@ public class ABADemo2 {
 
 我们先保证两个线程的初始版本为一致，后面修改是由于版本不一样就会修改失败。
 
-# [4、我们知道 ArrayList 是线程不安全，请编写一个不安全的案例并给出解决方案？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_4、我们知道-arraylist-是线程不安全，请编写一个不安全的案例并给出解决方案？)
+# 4、我们知道 ArrayList 是线程不安全，请编写一个不安全的案例并给出解决方案？
 
 故障现象
 
@@ -466,9 +466,9 @@ new CopyOnWriteArrayList<>();
 
 在读多写少的时候推荐使用 CopyOnWriteArrayList 这个类
 
-# [5、java 中锁你知道哪些？请手写一个自旋锁？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_5、java-中锁你知道哪些？请手写一个自旋锁？)
+# 5、java 中锁你知道哪些？请手写一个自旋锁？
 
-### [1、公平和非公平锁](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_1、公平和非公平锁)
+### 1、公平和非公平锁
 
 是什么
 
@@ -480,7 +480,7 @@ new CopyOnWriteArrayList<>();
 
 非公平锁：一上来就尝试占有锁，如果失败在进行排队
 
-### [2、可重入锁和不可重入锁](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_2、可重入锁和不可重入锁)
+### 2、可重入锁和不可重入锁
 
 是什么
 
@@ -541,7 +541,7 @@ new CopyOnWriteArrayList<>();
 } 
 ```
 
-### [3、自旋锁](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_3、自旋锁)
+### 3、自旋锁
 
 是指定尝试获取锁的线程不会立即堵塞，而是采用循环的方式去尝试获取锁，这样的好处是减少线程上线文切换的消耗，缺点就是循环会消耗 CPU。
 
@@ -601,7 +601,7 @@ Thread[Thread-1,5,main] unlock...
 
 获取锁的时候，如果原子引用为空就获取锁，不为空表示有人获取了锁，就循环等待。
 
-### [4、独占锁（写锁）/共享锁（读锁）](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_4、独占锁（写锁）共享锁（读锁）)
+### 4、独占锁（写锁）/共享锁（读锁）
 
 是什么
 
@@ -704,7 +704,7 @@ Thread-9 读取完成，读取结果是 4
 
 能保证读写、写读和写写的过程是互斥的时候是独享的，读读的时候是共享的。
 
-# [6、CountDownLatch、CyclicBarrier 和Semaphore 使用过吗？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_6、countdownlatch、cyclicbarrier-和semaphore-使用过吗？)
+# 6、CountDownLatch、CyclicBarrier 和Semaphore 使用过吗？
 
 ### [1、CountDownLatch](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_1、countdownlatch)
 
@@ -851,7 +851,7 @@ Thread-5 离开车位
 Thread-4 离开车位
 ```
 
-# [7、堵塞队列你知道吗？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_7、堵塞队列你知道吗？)
+# 7、堵塞队列你知道吗？
 
 ### [1、阻塞队列有哪些](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_1、阻塞队列有哪些)
 
@@ -944,7 +944,7 @@ public class SynchronousQueueDemo {
 - 线程池
 - 消息中间件
 
-# [8、synchronized 和 Lock 有什么区别？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_8、synchronized-和-lock-有什么区别？)
+# 8、synchronized 和 Lock 有什么区别？
 
 - 原始结构
 
@@ -1052,9 +1052,9 @@ ThreadPoolExecutor作为java.util.concurrent包对外提供基础实现，以内
 
 6.当设置allowCoreThreadTimeOut(true) 时，线程池中 corePoolSize 线程空闲时间达到 keepAliveTime 也将关闭。
 
-# [10、线程池用过吗？生产上你如何设置合理参数？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_10、线程池用过吗？生产上你如何设置合理参数？)
+# 10、线程池用过吗？生产上你如何设置合理参数？
 
-##### [线程池的拒绝策略你谈谈？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=线程池的拒绝策略你谈谈？)
+### 线程池的拒绝策略你谈谈？
 
 - 是什么
   - 等待队列已经满了，再也塞不下新的任务，同时线程池中的线程数达到了最大线程数，无法继续为新任务服务。
@@ -1064,7 +1064,7 @@ ThreadPoolExecutor作为java.util.concurrent包对外提供基础实现，以内
   - DiscardPolicy：不能执行的任务将被删除
   - DiscardOldestPolicy：如果执行程序尚未关闭，则位于工作队列头部的任务将被删除，然后重试执行程序（如果再次失败，则重复此过程）
 
-### [你在工作中单一的、固定数的和可变的三种创建线程池的方法，你用哪个多，超级大坑？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=你在工作中单一的、固定数的和可变的三种创建线程池的方法，你用哪个多，超级大坑？)
+### 你在工作中单一的、固定数的和可变的三种创建线程池的方法，你用哪个多，超级大坑？
 
 如果读者对Java中的阻塞队列有所了解的话，看到这里或许就能够明白原因了。
 
@@ -1080,7 +1080,7 @@ LinkedBlockingQueue是一个用链表实现的有界阻塞队列，容量可以�
 
 上面提到的问题主要体现在newFixedThreadPool和newSingleThreadExecutor两个工厂方法上，并不是说newCachedThreadPool和newScheduledThreadPool这两个方法就安全了，这两种方式创建的最大线程数可能是Integer.MAX_VALUE，而创建这么多线程，必然就有可能导致OOM。
 
-### [你在工作中是如何使用线程池的，是否自定义过线程池使用？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=你在工作中是如何使用线程池的，是否自定义过线程池使用？)
+### 你在工作中是如何使用线程池的，是否自定义过线程池使用？
 
 自定义线程池
 
@@ -1096,7 +1096,7 @@ public class ThreadPoolExecutorDemo {
 }
 ```
 
-### [合理配置线程池你是如果考虑的？](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=合理配置线程池你是如果考虑的？)
+### 合理配置线程池你是如果考虑的？
 
 - CPU 密集型
   - CPU 密集的意思是该任务需要大量的运算，而没有阻塞，CPU 一直全速运行。
@@ -1105,7 +1105,7 @@ public class ThreadPoolExecutorDemo {
   - 由于 IO 密集型任务线程并不是一直在执行任务，可以多分配一点线程数，如 CPU * 2 。
   - 也可以使用公式：CPU 核数 / (1 - 阻塞系数)；其中阻塞系数在 0.8 ～ 0.9 之间。
 
-# [11、死锁编码以及定位分析](http://notes.xiyankt.com/#/java面试突击训练/concurrent?id=_11、死锁编码以及定位分析)
+# 11、死锁编码以及定位分析
 
 产生死锁的原因
 
