@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Redis"
+title:      "JUC 篇"
 author:     "Johnny"
 header-style: text
 catalog: false
