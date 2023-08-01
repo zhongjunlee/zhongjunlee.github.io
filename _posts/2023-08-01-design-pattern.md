@@ -6,8 +6,8 @@ header-style: text
 catalog: false
 published: true
 tags:
-    - 设计模式
     - 计算机基础
+    - 设计模式
 ---
 
 
