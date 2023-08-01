@@ -4,7 +4,8 @@ title:      "RocketMQ"
 author:     "Johnny"
 header-style: text
 catalog: true
-tags: 
+tags:
+    - 中间件
     - RocketMQ
 ---
 
