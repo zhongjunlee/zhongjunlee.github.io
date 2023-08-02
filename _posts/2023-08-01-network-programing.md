@@ -10,18 +10,11 @@ tags:
     - 网络编程
 ---
 
-
-
-
-# SOCKET
-
-
-
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419101236.png)
+![image-20230802152343620](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152343620.png)
 
 ### [InetAddress 类](/网络编程/socket?id=inetaddress-类)
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419100735.png)
+![image-20230802152411639](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152411639.png)
 
 ```java
 public class Test {
@@ -48,7 +41,7 @@ public class Test {
 
 ### 应用案例 1(使用字节流)
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419101523.png)
+![image-20230802152427627](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152427627.png)
 
 #### 服务端
 
@@ -120,7 +113,7 @@ public class SocketTCP01Client {
 
 ### 应用案例 2(使用字节流) SocketTCP02.java
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419103132.png)
+![image-20230802152441480](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152441480.png)
 
 #### [服务端](/网络编程/socket?id=服务端-1)
 
@@ -209,7 +202,7 @@ public class SocketTCP02Client {
 
 ### 应用案例 3(使用字符流)
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419103212.png)
+![image-20230802152454313](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152454313.png)
 
 #### [服务端](/网络编程/socket?id=服务端-2)
 
@@ -297,7 +290,7 @@ public class SocketTCP03Client {
 
 ### 应用案例 4 TCPFileUploadServer.java TCPFileUploadClient.java
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419103942.png)
+![image-20230802152506333](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152506333.png)
 
 #### 工具类 StreamUtils
 
@@ -422,7 +415,7 @@ public class TCPFileUploadClient {
 
 ## UDP 网络通信编程
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419104910.png)
+![image-20230802152815808](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152815808.png)
 
 #### [接收端](/网络编程/socket?id=接收端)
 
@@ -511,7 +504,7 @@ public class UDPSenderB {
 
 ## 综合练习
 
-![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220419111038.png)
+![image-20230802152833902](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store/image-20230802152833902.png)
 
 ### [第一题服务端](/网络编程/socket?id=第一题服务端)
 
@@ -761,8 +754,6 @@ public class Client {
 ```
 
 ## 聊天项目
-
-项目结构 ![img](http://notes.xiyankt.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/img/QQ%E6%88%AA%E5%9B%BE20220420110910.png)
 
 ### QQClient
 

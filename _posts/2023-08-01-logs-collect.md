@@ -11,9 +11,7 @@ tags:
 ---
 
 
-# ELK+Filebeat+Kafka日志采集
-
-## 一、需要版本
+## 一、前置准备
 
 - 1、elasticsearch-7.1.1
 - 2、elasticsearch-head-5.0.0
