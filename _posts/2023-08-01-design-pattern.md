@@ -16,29 +16,11 @@ tags:
 
 # 1，设计模式概述
 
-## 1.1 软件设计模式的产生背景
+## 简介
 
-"设计模式"最初并不是出现在软件设计中，而是被用于建筑领域的设计中。
+软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。
 
-1977年美国著名建筑大师、加利福尼亚大学伯克利分校环境结构中心主任`克里斯托夫·亚历山大（Christopher Alexander）`在他的著作《建筑模式语言：城镇、建筑、构造》中描述了一些常见的建筑设计问题，并提出了 253 种关于对城镇、邻里、住宅、花园和房间等进行设计的基本模式。
-
-1990年软件工程界开始研讨设计模式的话题，后来召开了多次关于设计模式的研讨会。直到1995 年，艾瑞克·伽马（ErichGamma）、理査德·海尔姆（Richard Helm）、拉尔夫·约翰森（Ralph Johnson）、约翰·威利斯迪斯（John Vlissides）等 4 位作者合作出版了《设计模式：可复用面向对象软件的基础》一书，在此书中收录了 23 个设计模式，这是设计模式领域里程碑的事件，导致了软件设计模式的突破。这 4 位作者在软件开发领域里也以他们的“四人组”（Gang of Four，GoF）著称。
-
-## [1.2 软件设计模式的概念](http://notes.xiyankt.com/#/设计模式/index?id=_12-软件设计模式的概念)
-
-软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。也就是说，它是解决特定问题的一系列套路，是前辈们的代码设计经验的总结，具有一定的普遍性，可以反复使用。
-
-## [1.3 学习设计模式的必要性](http://notes.xiyankt.com/#/设计模式/index?id=_13-学习设计模式的必要性)
-
-设计模式的本质是面向对象设计原则的实际运用，是对类的封装性、继承性和多态性以及类的关联关系和组合关系的充分理解。
-
-正确使用设计模式具有以下优点。
-
-- 可以提高程序员的思维能力、编程能力和设计能力。
-- 使程序设计更加标准化、代码编制更加工程化，使软件开发效率大大提高，从而缩短软件的开发周期。
-- 使设计的代码可重用性高、可读性强、可靠性高、灵活性好、可维护性强。
-
-## [1.4 设计模式分类](http://notes.xiyankt.com/#/设计模式/index?id=_14-设计模式分类)
+## 设计模式分类
 
 - **创建型模式**
 
@@ -67,9 +49,9 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 - 在软件工程中，类图是一种静态的结构图，描述了系统的类的集合，类的属性和类之间的关系，可以简化了人们对系统的理解；
 - 类图是系统分析和设计阶段的重要产物，是系统编码和测试的重要模型。
 
-## [2.3 类图表示法](http://notes.xiyankt.com/#/设计模式/index?id=_23-类图表示法)
+## 2.3 类图表示法
 
-### [2.3.1 类的表示方式](http://notes.xiyankt.com/#/设计模式/index?id=_231-类的表示方式)
+### 2.3.1 类的表示方式
 
 在UML类图中，类使用包含类名、属性(field) 和方法(method) 且带有分割线的矩形来表示，比如下图表示一个Employee类，它包含name,age和address这3个属性，以及work()方法。
 
@@ -101,9 +83,9 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 - method1()方法：修饰符为private，没有参数，返回值类型为String。
 - method2()方法：修饰符为protected，接收两个参数，第一个参数类型为int，第二个参数类型为String，返回值类型是int。
 
-### [2.3.2 类与类之间关系的表示方式](http://notes.xiyankt.com/#/设计模式/index?id=_232-类与类之间关系的表示方式)
+### 2.3.2 类与类之间关系的表示方式
 
-#### [2.3.2.1 关联关系](http://notes.xiyankt.com/#/设计模式/index?id=_2321-关联关系)
+#### 2.3.2.1 关联关系
 
 关联关系是对象之间的一种引用关系，用于表示一类对象与另一类对象之间的联系，如老师和学生、师傅和徒弟、丈夫和妻子等。关联关系是类与类之间最常用的一种关系，分为一般关联关系、聚合关系和组合关系。我们先介绍一般关联。
 
@@ -129,7 +111,7 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 自关联在UML类图中用一个带有箭头且指向自身的线表示。上图的意思就是Node类包含类型为Node的成员变量，也就是“自己包含自己”。
 
-#### [2.3.2.2 聚合关系](http://notes.xiyankt.com/#/设计模式/index?id=_2322-聚合关系)
+#### 2.3.2.2 聚合关系
 
 聚合关系是关联关系的一种，是强关联关系，是整体和部分之间的关系。
 
@@ -139,7 +121,7 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 ![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/image-20191229173422328.png)
 
-#### [2.3.2.3 组合关系](http://notes.xiyankt.com/#/设计模式/index?id=_2323-组合关系)
+#### 2.3.2.3 组合关系
 
 组合表示类之间的整体与部分的关系，但它是一种更强烈的聚合关系。
 
@@ -149,7 +131,7 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 ![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/image-20191229173455149.png)
 
-#### [2.3.2.4 依赖关系](http://notes.xiyankt.com/#/设计模式/index?id=_2324-依赖关系)
+#### 2.3.2.4 依赖关系
 
 依赖关系是一种使用关系，它是对象之间耦合度最弱的一种关联方式，是临时性的关联。在代码中，某个类的方法通过局部变量、方法的参数或者对静态方法的调用来访问另一个类（被依赖类）中的某些方法来完成一些职责。
 
@@ -157,7 +139,7 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 ![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/image-20191229173518926.png)
 
-#### [2.3.2.5 继承关系](http://notes.xiyankt.com/#/设计模式/index?id=_2325-继承关系)
+#### 2.3.2.5 继承关系
 
 继承关系是对象之间耦合度最大的一种关系，表示一般与特殊的关系，是父类与子类之间的关系，是一种继承关系。
 
@@ -165,7 +147,7 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 ![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/image-20191229173539838.png)
 
-#### [2.3.2.6 实现关系](http://notes.xiyankt.com/#/设计模式/index?id=_2326-实现关系)
+#### 2.3.2.6 实现关系
 
 实现关系是接口与实现类之间的关系。在这种关系中，类实现了接口，类中的操作实现了接口中所声明的所有的抽象操作。
 
@@ -173,11 +155,11 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 ![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/image-20191229173554296.png)
 
-# [3，软件设计原则](http://notes.xiyankt.com/#/设计模式/index?id=_3，软件设计原则)
+# 3，软件设计原则
 
 在软件开发中，为了提高软件系统的可维护性和可复用性，增加软件的可扩展性和灵活性，程序员要尽量根据6条原则来开发程序，从而提高软件开发效率、节约软件开发成本和维护成本。
 
-## [3.1 开闭原则](http://notes.xiyankt.com/#/设计模式/index?id=_31-开闭原则)
+## 开闭原则
 
 **对扩展开放，对修改关闭**。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。
 
@@ -185,15 +167,7 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 因为抽象灵活性好，适应性广，只要抽象的合理，可以基本保持软件架构的稳定。而软件中易变的细节可以从抽象派生来的实现类来进行扩展，当软件需要发生变化时，只需要根据需求重新派生一个实现类来扩展就可以了。
 
-下面以 `搜狗输入法` 的皮肤为例介绍开闭原则的应用。
-
-【例】`搜狗输入法` 的皮肤设计。
-
-分析：`搜狗输入法` 的皮肤是输入法背景图片、窗口颜色和声音等元素的组合。用户可以根据自己的喜爱更换自己的输入法的皮肤，也可以从网上下载新的皮肤。这些皮肤有共同的特点，可以为其定义一个抽象类（AbstractSkin），而每个具体的皮肤（DefaultSpecificSkin和HeimaSpecificSkin）是其子类。用户窗体可以根据需要选择或者增加新的主题，而不需要修改原代码，所以它是满足开闭原则的。
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/open-close.png)
-
-## [3.2 里氏代换原则](http://notes.xiyankt.com/#/设计模式/index?id=_32-里氏代换原则)
+## 里氏代换原则
 
 里氏代换原则是面向对象设计的基本原则之一。
 
@@ -201,341 +175,17 @@ UML 从目标系统的不同角度出发，定义了用例图、类图、对象�
 
 如果通过重写父类的方法来完成新的功能，这样写起来虽然简单，但是整个继承体系的可复用性会比较差，特别是运用多态比较频繁时，程序运行出错的概率会非常大。
 
-下面看一个里氏替换原则中经典的一个例子
-
-【例】正方形不是长方形。
-
-在数学领域里，正方形毫无疑问是长方形，它是一个长宽相等的长方形。所以，我们开发的一个与几何图形相关的软件系统，就可以顺理成章的让正方形继承自长方形。
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E6%AD%A3%E6%96%B9%E5%BD%A2%E4%B8%8D%E6%98%AF%E9%95%BF%E6%96%B9%E5%BD%A2.png)
-
-代码如下：
-
-**长方形类（Rectangle）：**
-
-```java
-public class Rectangle {
-    private double length;
-    private double width;
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-}
-```
-
-**正方形（Square）：**
-
-由于正方形的长和宽相同，所以在方法setLength和setWidth中，对长度和宽度都需要赋相同值。
-
-```java
-public class Square extends Rectangle {
-    
-    public void setWidth(double width) {
-        super.setLength(width);
-        super.setWidth(width);
-    }
-
-    public void setLength(double length) {
-        super.setLength(length);
-        super.setWidth(length);
-    }
-}
-```
-
-类RectangleDemo是我们的软件系统中的一个组件，它有一个resize方法依赖基类Rectangle，resize方法是RectandleDemo类中的一个方法，用来实现宽度逐渐增长的效果。
-
-```java
-public class RectangleDemo {
-    
-    public static void resize(Rectangle rectangle) {
-        while (rectangle.getWidth() <= rectangle.getLength()) {
-            rectangle.setWidth(rectangle.getWidth() + 1);
-        }
-    }
-
-    //打印长方形的长和宽
-    public static void printLengthAndWidth(Rectangle rectangle) {
-        System.out.println(rectangle.getLength());
-        System.out.println(rectangle.getWidth());
-    }
-
-    public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setLength(20);
-        rectangle.setWidth(10);
-        resize(rectangle);
-        printLengthAndWidth(rectangle);
-
-        System.out.println("============");
-
-        Rectangle rectangle1 = new Square();
-        rectangle1.setLength(10);
-        resize(rectangle1);
-        printLengthAndWidth(rectangle1);
-    }
-}
-```
-
-我们运行一下这段代码就会发现，假如我们把一个普通长方形作为参数传入resize方法，就会看到长方形宽度逐渐增长的效果，当宽度大于长度,代码就会停止，这种行为的结果符合我们的预期；假如我们再把一个正方形作为参数传入resize方法后，就会看到正方形的宽度和长度都在不断增长，代码会一直运行下去，直至系统产生溢出错误。所以，普通的长方形是适合这段代码的，正方形不适合。 我们得出结论：在resize方法中，Rectangle类型的参数是不能被Square类型的参数所代替，如果进行了替换就得不到预期结果。因此，Square类和Rectangle类之间的继承关系违反了里氏代换原则，它们之间的继承关系不成立，正方形不是长方形。
-
-如何改进呢？此时我们需要重新设计他们之间的关系。抽象出来一个四边形接口(Quadrilateral)，让Rectangle类和Square类实现Quadrilateral接口
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E6%AD%A3%E6%96%B9%E5%BD%A2%E4%B8%8D%E6%98%AF%E9%95%BF%E6%96%B9%E5%BD%A2%E6%94%B9%E8%BF%9B.png)
-
-## [3.3 依赖倒转原则](http://notes.xiyankt.com/#/设计模式/index?id=_33-依赖倒转原则)
+## 依赖倒转原则
 
 高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。
 
-下面看一个例子来理解依赖倒转原则
-
-【例】组装电脑
-
-现要组装一台电脑，需要配件cpu，硬盘，内存条。只有这些配置都有了，计算机才能正常的运行。选择cpu有很多选择，如Intel，AMD等，硬盘可以选择希捷，西数等，内存条可以选择金士顿，海盗船等。
-
-**类图如下：**
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99.png)
-
-代码如下：
-
-**希捷硬盘类（XiJieHardDisk）:**
-
-```java
-public class XiJieHardDisk implements HardDisk {
-
-    public void save(String data) {
-        System.out.println("使用希捷硬盘存储数据" + data);
-    }
-
-    public String get() {
-        System.out.println("使用希捷希捷硬盘取数据");
-        return "数据";
-    }
-}
-```
-
-**Intel处理器（IntelCpu）：**
-
-```java
-public class IntelCpu implements Cpu {
-
-    public void run() {
-        System.out.println("使用Intel处理器");
-    }
-}
-```
-
-**金士顿内存条（KingstonMemory）：**
-
-```java
-public class KingstonMemory implements Memory {
-
-    public void save() {
-        System.out.println("使用金士顿作为内存条");
-    }
-}
-```
-
-**电脑（Computer）：**
-
-```java
-public class Computer {
-
-    private XiJieHardDisk hardDisk;
-    private IntelCpu cpu;
-    private KingstonMemory memory;
-
-    public IntelCpu getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(IntelCpu cpu) {
-        this.cpu = cpu;
-    }
-
-    public KingstonMemory getMemory() {
-        return memory;
-    }
-
-    public void setMemory(KingstonMemory memory) {
-        this.memory = memory;
-    }
-
-    public XiJieHardDisk getHardDisk() {
-        return hardDisk;
-    }
-
-    public void setHardDisk(XiJieHardDisk hardDisk) {
-        this.hardDisk = hardDisk;
-    }
-
-    public void run() {
-        System.out.println("计算机工作");
-        cpu.run();
-        memory.save();
-        String data = hardDisk.get();
-        System.out.println("从硬盘中获取的数据为：" + data);
-    }
-}
-```
-
-**测试类（TestComputer）：**
-
-测试类用来组装电脑。
-
-```java
-public class TestComputer {
-    public static void main(String[] args) {
-        Computer computer = new Computer();
-        computer.setHardDisk(new XiJieHardDisk());
-        computer.setCpu(new IntelCpu());
-        computer.setMemory(new KingstonMemory());
-
-        computer.run();
-    }
-}
-```
-
-上面代码可以看到已经组装了一台电脑，但是似乎组装的电脑的cpu只能是Intel的，内存条只能是金士顿的，硬盘只能是希捷的，这对用户肯定是不友好的，用户有了机箱肯定是想按照自己的喜好，选择自己喜欢的配件。
-
-根据依赖倒转原则进行改进：
-
-代码我们只需要修改Computer类，让Computer类依赖抽象（各个配件的接口），而不是依赖于各个组件具体的实现类。
-
-**类图如下：**
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99%E6%94%B9%E8%BF%9B.png)
-
-**电脑（Computer）：**
-
-```java
-public class Computer {
-
-    private HardDisk hardDisk;
-    private Cpu cpu;
-    private Memory memory;
-
-    public HardDisk getHardDisk() {
-        return hardDisk;
-    }
-
-    public void setHardDisk(HardDisk hardDisk) {
-        this.hardDisk = hardDisk;
-    }
-
-    public Cpu getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(Cpu cpu) {
-        this.cpu = cpu;
-    }
-
-    public Memory getMemory() {
-        return memory;
-    }
-
-    public void setMemory(Memory memory) {
-        this.memory = memory;
-    }
-
-    public void run() {
-        System.out.println("计算机工作");
-    }
-}
-```
-
-面向对象的开发很好的解决了这个问题，一般情况下抽象的变化概率很小，让用户程序依赖于抽象，实现的细节也依赖于抽象。即使实现细节不断变动，只要抽象不变，客户程序就不需要变化。这大大降低了客户程序与实现细节的耦合度。
-
-## [3.4 接口隔离原则](http://notes.xiyankt.com/#/设计模式/index?id=_34-接口隔离原则)
+## 接口隔离原则
 
 客户端不应该被迫依赖于它不使用的方法；一个类对另一个类的依赖应该建立在最小的接口上。
 
 下面看一个例子来理解接口隔离原则
 
-【例】安全门案例
-
-我们需要创建一个`黑马`品牌的安全门，该安全门具有防火、防水、防盗的功能。可以将防火，防水，防盗功能提取成一个接口，形成一套规范。类图如下：
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99.png)
-
-上面的设计我们发现了它存在的问题，黑马品牌的安全门具有防盗，防水，防火的功能。现在如果我们还需要再创建一个传智品牌的安全门，而该安全门只具有防盗、防水功能呢？很显然如果实现SafetyDoor接口就违背了接口隔离原则，那么我们如何进行修改呢？看如下类图：
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%991.png)
-
-代码如下：
-
-**AntiTheft（接口）：**
-
-```java
-public interface AntiTheft {
-    void antiTheft();
-}
-```
-
-**Fireproof（接口）：**
-
-```java
-public interface Fireproof {
-    void fireproof();
-}
-```
-
-**Waterproof（接口）：**
-
-```java
-public interface Waterproof {
-    void waterproof();
-}
-```
-
-**HeiMaSafetyDoor（类）：**
-
-```java
-public class HeiMaSafetyDoor implements AntiTheft,Fireproof,Waterproof {
-    public void antiTheft() {
-        System.out.println("防盗");
-    }
-
-    public void fireproof() {
-        System.out.println("防火");
-    }
-
-
-    public void waterproof() {
-        System.out.println("防水");
-    }
-}
-```
-
-**ItcastSafetyDoor（类）：**
-
-```java
-public class ItcastSafetyDoor implements AntiTheft,Fireproof {
-    public void antiTheft() {
-        System.out.println("防盗");
-    }
-
-    public void fireproof() {
-        System.out.println("防火");
-    }
-}
-```
-
-## [3.5 迪米特法则](http://notes.xiyankt.com/#/设计模式/index?id=_35-迪米特法则)
+## 迪米特法则
 
 迪米特法则又叫最少知识原则。
 
@@ -545,97 +195,7 @@ public class ItcastSafetyDoor implements AntiTheft,Fireproof {
 
 迪米特法则中的“朋友”是指：当前对象本身、当前对象的成员对象、当前对象所创建的对象、当前对象的方法参数等，这些对象同当前对象存在关联、聚合或组合关系，可以直接访问这些对象的方法。
 
-下面看一个例子来理解迪米特法则
-
-【例】明星与经纪人的关系实例
-
-明星由于全身心投入艺术，所以许多日常事务由经纪人负责处理，如和粉丝的见面会，和媒体公司的业务洽淡等。这里的经纪人是明星的朋友，而粉丝和媒体公司是陌生人，所以适合使用迪米特法则。
-
-类图如下：
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99.png)
-
-代码如下：
-
-**明星类（Star）**
-
-```java
-public class Star {
-    private String name;
-
-    public Star(String name) {
-        this.name=name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-```
-
-**粉丝类（Fans）**
-
-```java
-public class Fans {
-    private String name;
-
-    public Fans(String name) {
-        this.name=name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-```
-
-**媒体公司类（Company）**
-
-```java
-public class Company {
-    private String name;
-
-    public Company(String name) {
-        this.name=name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-```
-
-**经纪人类（Agent）**
-
-```java
-public class Agent {
-    private Star star;
-    private Fans fans;
-    private Company company;
-
-    public void setStar(Star star) {
-        this.star = star;
-    }
-
-    public void setFans(Fans fans) {
-        this.fans = fans;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
-
-    public void meeting() {
-        System.out.println(fans.getName() + "与明星" + star.getName() + "见面了。");
-    }
-
-    public void business() {
-        System.out.println(company.getName() + "与明星" + star.getName() + "洽淡业务。");
-    }
-}
-```
-
-## [3.6 合成复用原则](http://notes.xiyankt.com/#/设计模式/index?id=_36-合成复用原则)
+## 合成复用原则
 
 合成复用原则是指：尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。
 
@@ -653,19 +213,7 @@ public class Agent {
 2. 对象间的耦合度低。可以在类的成员位置声明抽象。
 3. 复用的灵活性高。这种复用可以在运行时动态进行，新对象可以动态地引用与成分对象类型相同的对象。
 
-下面看一个例子来理解合成复用原则
-
-【例】汽车分类管理程序
-
-汽车按“动力源”划分可分为汽油汽车、电动汽车等；按“颜色”划分可分为白色汽车、黑色汽车和红色汽车等。如果同时考虑这两种分类，其组合就很多。类图如下：
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99.png)
-
-从上面类图我们可以看到使用继承复用产生了很多子类，如果现在又有新的动力源或者新的颜色的话，就需要再定义新的类。我们试着将继承复用改为聚合复用看一下。
-
-![img](http://notes.xiyankt.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/img/%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%991.png)
-
-# [4，创建者模式](http://notes.xiyankt.com/#/设计模式/index?id=_4，创建者模式)
+# 4，创建者模式
 
 创建型模式的主要关注点是“怎样创建对象？”，它的主要特点是“将对象的创建与使用分离”。
 
