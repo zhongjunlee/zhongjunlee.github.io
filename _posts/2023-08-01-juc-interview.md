@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "JUC 篇"
+title:      "JUC"
 author:     "Johnny"
 header-style: text
 catalog: false
 published: true
 tags:
-    - JUC面试
+    - JUC
     - 面试
 ---
 
