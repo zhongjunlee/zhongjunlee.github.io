@@ -3,7 +3,7 @@ title: Johnny Blog
 SEOTitle: 李仲君的博客 | Johnny Blog
 header-img: img/home-bg.jpg
 email: 326187255@qq.com
-description: "这里是 @Johnny李仲君 的个人博客，与你一起发现更大的世界 | 要做一个有 thought 的程序员"
+description: "这里是 @Johnny李仲君 的个人博客，与你一起发现更大的世界 | 要做一个有 Swagger 的程序员"
 keyword: "李仲君, Johnny李仲君, Java, zhongjunlee, 李仲君的博客, Johnny Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计"
 url: "https://lizhongjun.top"
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
@@ -16,6 +16,7 @@ RSS: false
 #weibo_username: huxpro
 github_username: zhongjunlee
 zhihu_username: superhero-34-87
+system_username: system
 #twitter_username: huxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
@@ -74,7 +75,7 @@ ga_domain: lizhongnjun.top
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 thought 的程序员 <br> Java @ NCS"
+sidebar-about-description: "要做一个有 Swagger 的程序员 <br> Java @ NCS"
 sidebar-avatar: img/logo1.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
