@@ -1,4 +1,3 @@
-```
 ---
 layout:     post
 title:      "Spring Security"
@@ -11,7 +10,6 @@ tags:
     - Spring
     - Spring Security
 ---
-```
 
 
 
@@ -104,7 +102,7 @@ public class HelloController {
 
 ### **2.1 登陆校验流程**
 
-![img](https://pic1.zhimg.com/80/v2-f3314e0c798ae50023f14ad65f75bd68_720w.webp)
+![登录校验流程](.images/登录校验流程.jpg)
 
 ### **2.2 原理初探**
 
@@ -114,7 +112,7 @@ public class HelloController {
 
 SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各种功能的过滤器。这里我们可以看看入门案例中的过滤器。
 
-![img](https://pic3.zhimg.com/80/v2-ab7907d3e7a006d14728c5973a573b72_720w.webp)
+![spring完成流程](.images/spring完成流程.jpg)
 
 图中只展示了核心过滤器，其它的非核心过滤器并没有在图中展示。
 
@@ -126,7 +124,7 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 我们可以通过Debug查看当前系统中SpringSecurity过滤器链中有哪些过滤器及它们的顺序。
 
-![img](https://pic4.zhimg.com/80/v2-4d35d8307a67791ac13dda3e539cc54b_720w.webp)
+![sourcecode](.images/sourcecode.jpg)
 
 ```java
 @SpringBootApplication
@@ -141,7 +139,7 @@ public class SecurityApplication {
 
 ### **2.2.2 认证流程详解**
 
-![img](https://pic2.zhimg.com/80/v2-921db20ed5440245981e4a5917d712ed_720w.webp)
+![认证流程](.images/认证流程.jpg)
 
 概念速查:
 
@@ -377,7 +375,7 @@ public class JwtUtil {
     //有效期为
     public static final Long JWT_TTL = 60 * 60 *1000L;// 60 * 60 *1000  一个小时
     //设置秘钥明文
-    public static final String JWT_KEY = "sangeng";
+    public static final String JWT_KEY = "johnny";
 
     public static String getUUID(){
         String token = UUID.randomUUID().toString().replaceAll("-", "");
@@ -875,7 +873,7 @@ public interface UserMapper extends BaseMapper<User> {
 
 ```text
 @SpringBootApplication
-@MapperScan("com.sangeng.mapper")
+@MapperScan("com.johnny.mapper")
 public class SimpleSecurityApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(SimpleSecurityApplication.class);
@@ -1282,7 +1280,7 @@ public class HelloController {
 我们之前定义了UserDetails的实现类LoginUser，想要让其能封装权限信息就要对其进行修改。
 
 ```text
-package com.sangeng.domain;
+package com.johnny.domain;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
@@ -1364,14 +1362,14 @@ public class LoginUser implements UserDetails {
 LoginUser修改完后我们就可以在UserDetailsServiceImpl中去把权限信息封装到LoginUser中了。我们写死权限进行测试，后面我们再从数据库中查询权限信息。
 
 ```text
-package com.sangeng.service.impl;
+package com.johnny.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
-import com.sangeng.domain.LoginUser;
-import com.sangeng.domain.User;
-import com.sangeng.mapper.UserMapper;
+import com.johnny.domain.LoginUser;
+import com.johnny.domain.User;
+import com.johnny.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -1411,7 +1409,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 RBAC权限模型（Role-Based Access Control）即：基于角色的权限控制。这是目前最常被开发者使用也是相对易用、通用权限模型。
 
-![img](https://pic1.zhimg.com/80/v2-dcee062f2cd02d0b741ca6e6add1fe28_720w.webp)
+![RBAC权限模型](C:/Users/Arjun%20Lee/Downloads/RBAC%E6%9D%83%E9%99%90%E6%A8%A1%E5%9E%8B.jpg)
 
 ### **3.2.3.2 准备工作**
 
@@ -1513,7 +1511,7 @@ WHERE
  user_id = 2
  AND r.`status` = 0
  AND m.`status` = 0
-package com.sangeng.domain;
+package com.johnny.domain;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -1593,7 +1591,7 @@ public class Menu implements Serializable {
 
 ```text
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sangeng.domain.Menu;
+import com.johnny.domain.Menu;
 
 import java.util.List;
 
@@ -1608,7 +1606,7 @@ public interface MenuMapper extends BaseMapper<Menu> {
 ```text
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sangeng.mapper.MenuMapper">
+<mapper namespace="com.johnny.mapper.MenuMapper">
 
     <select id="selectPermsByUserId" resultType="java.lang.String">
         SELECT
@@ -2323,7 +2321,7 @@ public class JwtUtil {
     //有效期为
     public static final Long JWT_TTL = 60 * 60 *1000L;// 60 * 60 *1000  一个小时
     //设置秘钥明文
-    public static final String JWT_KEY = "sangeng";
+    public static final String JWT_KEY = "johnny";
 
     public static String getUUID(){
         String token = UUID.randomUUID().toString().replaceAll("-", "");
@@ -2817,7 +2815,7 @@ public interface UserMapper extends BaseMapper<User> {
 
 ```java
 @SpringBootApplication
-@MapperScan("com.sangeng.mapper")
+@MapperScan("com.johnny.mapper")
 public class SimpleSecurityApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(SimpleSecurityApplication.class);
@@ -3224,7 +3222,7 @@ public class HelloController {
 我们之前定义了UserDetails的实现类LoginUser，想要让其能封装权限信息就要对其进行修改。
 
 ```java
-package com.sangeng.domain;
+package com.johnny.domain;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
@@ -3306,14 +3304,14 @@ public class LoginUser implements UserDetails {
 LoginUser修改完后我们就可以在UserDetailsServiceImpl中去把权限信息封装到LoginUser中了。我们写死权限进行测试，后面我们再从数据库中查询权限信息。
 
 ```java
-package com.sangeng.service.impl;
+package com.johnny.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
-import com.sangeng.domain.LoginUser;
-import com.sangeng.domain.User;
-import com.sangeng.mapper.UserMapper;
+import com.johnny.domain.LoginUser;
+import com.johnny.domain.User;
+import com.johnny.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -3460,7 +3458,7 @@ WHERE
 
 
 ```java
-package com.sangeng.domain;
+package com.johnny.domain;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -3540,7 +3538,7 @@ public class Menu implements Serializable {
 
 ```java
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sangeng.domain.Menu;
+import com.johnny.domain.Menu;
 
 import java.util.List;
 
@@ -3556,7 +3554,7 @@ public interface MenuMapper extends BaseMapper<Menu> {
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sangeng.mapper.MenuMapper">
+<mapper namespace="com.johnny.mapper.MenuMapper">
 
     <select id="selectPermsByUserId" resultType="java.lang.String">
         SELECT
@@ -3960,4 +3958,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### **其它认证方案畅想**
 
-![img](https://pic1.zhimg.com/80/v2-e99a6424b5590856d41cfe34ef0e5434_720w.webp)
+![其他认证方案](.images/其他认证方案.png)
