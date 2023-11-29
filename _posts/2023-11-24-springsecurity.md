@@ -1,4 +1,3 @@
----
 layout:     post
 title:      "Spring Security"
 author:     "Johnny"
@@ -6,11 +5,9 @@ header-style: text
 catalog: false
 published: true
 tags:
-    - Java
-    - Spring
-    - Spring Security
----
-
+   - Java
+   - Spring
+   - Spring Security
 
 
 
@@ -102,8 +99,7 @@ public class HelloController {
 
 ### **2.1 登陆校验流程**
 
-![登录校验流程](.images/登录校验流程.jpg)
-
+![登录校验流程](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store@main/images/%E7%99%BB%E5%BD%95%E6%A0%A1%E9%AA%8C%E6%B5%81%E7%A8%8B.jpg)
 ### **2.2 原理初探**
 
 想要知道如何实现自己的登陆流程就必须要先知道入门案例中SpringSecurity的流程。
@@ -112,7 +108,7 @@ public class HelloController {
 
 SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各种功能的过滤器。这里我们可以看看入门案例中的过滤器。
 
-![spring完成流程](.images/spring完成流程.jpg)
+![spring完成流程](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store@main/images/spring%E5%AE%8C%E6%88%90%E6%B5%81%E7%A8%8B.jpg)
 
 图中只展示了核心过滤器，其它的非核心过滤器并没有在图中展示。
 
@@ -124,7 +120,7 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 我们可以通过Debug查看当前系统中SpringSecurity过滤器链中有哪些过滤器及它们的顺序。
 
-![sourcecode](.images/sourcecode.jpg)
+![sourcecode](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store@main/images/sourcecode.jpg)
 
 ```java
 @SpringBootApplication
@@ -139,7 +135,7 @@ public class SecurityApplication {
 
 ### **2.2.2 认证流程详解**
 
-![认证流程](.images/认证流程.jpg)
+![认证流程](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store@main/images/%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.jpg)
 
 概念速查:
 
@@ -1409,7 +1405,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 RBAC权限模型（Role-Based Access Control）即：基于角色的权限控制。这是目前最常被开发者使用也是相对易用、通用权限模型。
 
-![RBAC权限模型](C:/Users/Arjun%20Lee/Downloads/RBAC%E6%9D%83%E9%99%90%E6%A8%A1%E5%9E%8B.jpg)
+![RBAC](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store@main/images/RBAC.jpg)
 
 ### **3.2.3.2 准备工作**
 
@@ -3956,6 +3952,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-### **其它认证方案畅想**
+### **其它认证方案**
 
-![其他认证方案](.images/其他认证方案.png)
+![其他认证方案](https://cdn.jsdelivr.net/gh/zhongjunlee/image-store@main/images/%E5%85%B6%E4%BB%96%E8%AE%A4%E8%AF%81%E6%96%B9%E6%A1%88.jpg)
