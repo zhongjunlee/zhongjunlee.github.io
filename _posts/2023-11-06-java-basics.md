@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Java Basics Knowledge"
+title:      "Java Basics"
 author:     "Johnny"
 header-style: text
 catalog: false
